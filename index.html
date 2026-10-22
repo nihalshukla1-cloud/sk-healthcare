@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S K Healthcare — आपकी सेहत, हमारी ज़िम्मेदारी! | Bareilly</title>
+<meta name="description" content="S K Healthcare, Bareilly — All types of medical equipment & consumables. BP Machine, Sugar Machine, Nebulizer, Pulse Oximeter aur bahut kuch. सभी ब्रांड्स उपलब्ध, किफायती दाम! Call 9058070963">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#0fa6a0;
+  --teal-dark:#0b7c78;
+  --orange:#ff8a3d;
+  --yellow:#ffc93c;
+  --pink:#ff5d8f;
+  --sky:#38bdf8;
+  --green:#22c55e;
+  --ink:#25313a;
+  --muted:#5b6b77;
+  --cream:#fff8ef;
+  --white:#ffffff;
+  --shadow:0 10px 30px rgba(20,40,60,.10);
+  --radius:24px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Hind',system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+h1,h2,h3,.logo,.btn{font-family:'Baloo 2','Hind',cursive}
+img{max-width:100%}
+a{text-decoration:none;color:inherit}
+.container{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:70px 0;position:relative}
+
+.stars{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5}
+.blob{position:absolute;border-radius:50%;filter:blur(2px)}
+
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(8px);
+  box-shadow:0 2px 0 rgba(0,0,0,.04);
+  transition:box-shadow .3s;
+}
+header.scrolled{box-shadow:0 8px 24px rgba(20,40,60,.12)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.logo{display:flex;align-items:center;gap:10px;font-size:1.5rem;font-weight:800;color:var(--teal-dark)}
+.logo .cross{
+  width:44px;height:44px;border-radius:14px;
+  background:linear-gradient(135deg,var(--teal),var(--sky));
+  display:grid;place-items:center;color:#fff;font-size:1.4rem;
+  box-shadow:0 6px 16px rgba(14,166,160,.4);
+}
+.logo small{display:block;font-size:.72rem;color:var(--muted);font-weight:600;line-height:1}
+.nav-links{display:flex;gap:26px;align-items:center;font-weight:600}
+.nav-links a{position:relative;padding:4px 0;transition:color .2s}
+.nav-links a:hover{color:var(--orange)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:3px;border-radius:3px;background:var(--orange);transition:width .25s}
+.nav-links a:hover::after{width:100%}
+.hamburger{display:none;font-size:1.6rem;background:none;border:none;color:var(--teal-dark);cursor:pointer}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:13px 26px;border-radius:999px;font-weight:700;font-size:1.02rem;
+  transition:transform .18s,box-shadow .18s;cursor:pointer;border:none;
+}
+.btn:hover{transform:translateY(-3px) scale(1.03)}
+.btn-primary{background:linear-gradient(135deg,var(--orange),var(--pink));color:#fff;box-shadow:0 8px 20px rgba(255,138,61,.4)}
+.btn-teal{background:linear-gradient(135deg,var(--teal),var(--green));color:#fff;box-shadow:0 8px 20px rgba(14,166,160,.35)}
+.btn-outline{background:#fff;color:var(--teal-dark);border:2px solid var(--teal);box-shadow:var(--shadow)}
+.btn-wa{background:#25d366;color:#fff;box-shadow:0 8px 20px rgba(37,211,102,.4)}
+
+.hero{padding:80px 0 90px;background:linear-gradient(160deg,#e9fbf8 0%,#fff6ea 55%,#ffeef3 100%);overflow:hidden}
+.hero-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.pill{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;border:2px dashed var(--teal);color:var(--teal-dark);
+  padding:8px 18px;border-radius:999px;font-weight:700;font-size:.95rem;
+}
+.hero h1{font-size:3rem;line-height:1.15;margin:18px 0 10px;font-weight:800}
+.hero h1 span{color:var(--orange);position:relative;white-space:nowrap}
+.hero h1 span::after{
+  content:"";position:absolute;left:0;bottom:6px;width:100%;height:12px;
+  background:rgba(255,201,60,.45);z-index:-1;border-radius:6px;
+}
+.hero p.sub{font-size:1.15rem;color:var(--muted);max-width:520px}
+.hero .tagline{
+  margin:14px 0 26px;padding:12px 18px;border-radius:16px;background:#fff;
+  border-left:5px solid var(--teal);font-weight:600;color:var(--teal-dark);
+  box-shadow:var(--shadow);display:inline-block;
+}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-trust{display:flex;gap:22px;margin-top:30px;flex-wrap:wrap}
+.hero-trust b{display:block;font-size:1.3rem;font-family:'Baloo 2';color:var(--teal-dark)}
+.hero-trust span{font-size:.85rem;color:var(--muted)}
+
+.hero-art{position:relative;display:grid;place-items:center}
+.hero-art .card{
+  background:#fff;border-radius:32px;box-shadow:var(--shadow);
+  padding:34px 40px;text-align:center;transform:rotate(-3deg);
+  border:3px solid #ffe1c7;position:relative;z-index:2;
+}
+.hero-art .card .big{font-size:4.5rem}
+.hero-art .card h3{font-size:1.4rem;color:var(--teal-dark)}
+.bubble{
+  position:absolute;display:grid;place-items:center;border-radius:50%;
+  font-size:1.5rem;box-shadow:var(--shadow);animation:float 4.5s ease-in-out infinite;
+}
+.b1{width:72px;height:72px;background:var(--yellow);top:-10px;left:6%;animation-delay:.2s}
+.b2{width:58px;height:58px;background:var(--sky);bottom:8%;left:-6%;animation-delay:1s}
+.b3{width:64px;height:64px;background:var(--pink);top:30%;right:-4%;animation-delay:.6s}
+.b4{width:56px;height:56px;background:var(--green);bottom:-14px;right:12%;animation-delay:1.4s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+
+.sec-head{text-align:center;max-width:640px;margin:0 auto 44px}
+.sec-head h2{font-size:2.3rem;font-weight:800;color:var(--teal-dark)}
+.sec-head h2 em{color:var(--pink);font-style:normal}
+.sec-head p{color:var(--muted);font-size:1.05rem}
+
+.grid{display:grid;gap:22px}
+.prod-grid{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card-p{
+  background:#fff;border-radius:var(--radius);padding:26px 22px;text-align:center;
+  box-shadow:var(--shadow);transition:transform .22s;position:relative;overflow:hidden;
+  border-bottom:6px solid transparent;
+}
+.card-p:hover{transform:translateY(-8px) rotate(-1deg)}
+.card-p .ic{
+  width:74px;height:74px;margin:0 auto 16px;border-radius:22px;
+  display:grid;place-items:center;font-size:2.1rem;transition:transform .3s;
+}
+.card-p:hover .ic{transform:scale(1.12) rotate(6deg)}
+.card-p h3{font-size:1.2rem;color:var(--ink)}
+.card-p p{font-size:.9rem;color:var(--muted);margin-top:4px}
+.card-p .tag{
+  display:inline-block;margin-top:12px;padding:5px 14px;border-radius:999px;
+  font-size:.78rem;font-weight:700;
+}
+.c1{background:#e0f7f6;border-color:var(--teal)}  .c1 .ic{background:#b8ecea} .c1 .tag{background:#d9f5f4;color:var(--teal-dark)}
+.c2{background:#fff1e5;border-color:var(--orange)}.c2 .ic{background:#ffd9ba} .c2 .tag{background:#ffe6d2;color:#c2601a}
+.c3{background:#eef7ff;border-color:var(--sky)}   .c3 .ic{background:#c8e9fd} .c3 .tag{background:#ddf0fe;color:#1a76b3}
+.c4{background:#fff0f5;border-color:var(--pink)}  .c4 .ic{background:#ffd0e0} .c4 .tag{background:#ffe0eb;color:#c93070}
+.c5{background:#effde9;border-color:var(--green)}.c5 .ic{background:#cdf5bd} .c5 .tag{background:#e2fadb;color:#15803d}
+.c6{background:#fdf7e2;border-color:var(--yellow)}.c6 .ic{background:#fbeaa8}.c6 .tag{background:#fdf3d0;color:#a16207}
+.c7{background:#f3efff;border-color:#8b5cf6}       .c7 .ic{background:#ddd3fb} .c7 .tag{background:#ebe4fc;color:#6d28d9}
+
+.brands{
+  margin-top:40px;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:18px 26px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:center;
+}
+.brands b{color:var(--teal-dark);font-family:'Baloo 2';font-size:1.05rem}
+.chip{
+  padding:8px 18px;border-radius:999px;font-weight:700;font-size:.9rem;
+  background:var(--cream);border:2px solid #f0e6d4;transition:all .2s;
+}
+.chip:hover{border-color:var(--orange);color:var(--orange);transform:scale(1.06)}
+
+.why{background:linear-gradient(150deg,#0fa6a0,#0b7c78);color:#fff}
+.why .sec-head h2{color:#fff}
+.why .sec-head p{color:#d9f6f4}
+.why-grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.w-card{
+  background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.25);
+  border-radius:var(--radius);padding:26px 20px;text-align:center;
+  transition:transform .22s,background .22s;
+}
+.w-card:hover{transform:translateY(-8px);background:rgba(255,255,255,.18)}
+.w-card .ic{font-size:2.4rem}
+.w-card h3{margin:10px 0 4px;font-size:1.15rem}
+.w-card p{font-size:.9rem;color:#e6fbfa}
+
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:26px;align-items:stretch}
+.info-card{
+  background:linear-gradient(150deg,var(--teal),var(--green));color:#fff;
+  border-radius:var(--radius);padding:34px 30px;box-shadow:var(--shadow);
+}
+.info-card h3{font-size:1.7rem;margin-bottom:8px}
+.info-row{display:flex;gap:14px;margin-top:20px;align-items:flex-start}
+.info-row .ic{
+  width:48px;height:48px;flex:none;border-radius:14px;background:rgba(255,255,255,.18);
+  display:grid;place-items:center;font-size:1.3rem;
+}
+.info-row p{font-size:.98rem;color:#f0fdfc}
+.info-row a{font-weight:700;font-size:1.1rem;display:block;color:#fff}
+.info-row a:hover{text-decoration:underline}
+.map-card{
+  background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:34px 30px;display:flex;flex-direction:column;gap:18px;justify-content:center;
+}
+.map-card h3{color:var(--teal-dark);font-size:1.5rem}
+.map-card p{color:var(--muted)}
+.map-btns{display:flex;gap:12px;flex-wrap:wrap}
+
+.cta-strip{
+  margin:0 20px 70px;background:linear-gradient(120deg,var(--orange),var(--pink),#a855f7);
+  border-radius:32px;color:#fff;text-align:center;padding:44px 26px;
+  box-shadow:0 14px 34px rgba(255,94,143,.35);
+}
+.cta-strip h2{font-size:2rem;font-weight:800}
+.cta-strip p{margin:8px 0 22px;color:#fff3e9}
+
+footer{background:#123;padding:40px 20px 30px;color:#cfd8e3;text-align:center;font-size:.95rem}
+footer .f-logo{font-family:'Baloo 2';font-size:1.6rem;color:#fff;font-weight:800}
+footer .f-tag{color:var(--yellow);font-weight:600;margin:8px 0 4px;font-size:1.05rem}
+footer .f-en{color:#9fb3c8;font-size:.85rem;margin-bottom:18px}
+footer hr{border:none;border-top:1px solid rgba(255,255,255,.12);margin:18px auto;max-width:640px}
+footer a{color:#ffd66b;font-weight:600}
+
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .7s ease,transform .7s ease}
+.reveal.show{opacity:1;transform:none}
+.fab{
+  position:fixed;bottom:26px;right:26px;z-index:60;width:60px;height:60px;
+  border-radius:50%;background:#25d366;display:grid;place-items:center;font-size:1.8rem;
+  box-shadow:0 10px 26px rgba(37,211,102,.5);transition:transform .2s;
+}
+.fab:hover{transform:scale(1.1) rotate(8deg)}
+
+.add-cart{
+  margin-top:11px;width:100%;padding:9px 0;border:none;cursor:pointer;
+  border-radius:999px;font-family:'Baloo 2',cursive;font-weight:700;font-size:.95rem;
+  background:var(--teal);color:#fff;transition:all .2s;
+}
+.add-cart:hover{background:var(--teal-dark);transform:scale(1.04)}
+.add-cart.done{background:var(--green);transform:scale(1.06)}
+.fab-cart{bottom:98px;background:var(--orange);color:#fff;font-size:1.55rem;box-shadow:0 10px 26px rgba(255,138,61,.5)}
+.fab-badge{
+  position:absolute;top:-4px;right:-4px;background:var(--pink);color:#fff;
+  font-size:.72rem;font-weight:700;min-width:22px;height:22px;border-radius:999px;
+  display:grid;place-items:center;padding:0 5px;border:2px solid var(--cream);
+}
+.fab-cart.hide{display:none}
+.cart-overlay{position:fixed;inset:0;background:rgba(15,40,45,.45);backdrop-filter:blur(2px);opacity:0;pointer-events:none;transition:opacity .25s;z-index:70}
+.cart-overlay.on{opacity:1;pointer-events:auto}
+.cart-panel{
+  position:fixed;top:0;right:0;bottom:0;width:min(430px,100vw);background:var(--cream);
+  z-index:80;transform:translateX(105%);transition:transform .3s cubic-bezier(.2,.8,.3,1);
+  display:flex;flex-direction:column;box-shadow:-10px 0 40px rgba(0,0,0,.18);
+}
+.cart-panel.open{transform:none}
+.cart-head{background:linear-gradient(135deg,var(--teal),var(--green));color:#fff;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.cart-head h3{font-size:1.3rem}
+.cart-head .hbtns{display:flex;align-items:center;gap:10px}
+.cart-head .clear{background:none;border:none;color:#fff;opacity:.85;font-size:.82rem;cursor:pointer;text-decoration:underline;font-family:'Hind'}
+.cart-close{background:rgba(255,255,255,.2);border:none;color:#fff;width:36px;height:36px;border-radius:12px;font-size:1.05rem;cursor:pointer}
+.cart-items{flex:1;overflow-y:auto;padding:16px 18px;display:flex;flex-direction:column;gap:12px}
+.cart-empty{text-align:center;color:var(--muted);padding:44px 10px;font-weight:600}
+.cart-empty .big{font-size:3rem;display:block;margin-bottom:10px}
+.cart-empty a{color:var(--teal-dark);text-decoration:underline}
+.item{background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:12px 14px;display:flex;align-items:center;gap:10px}
+.item .nm{flex:1;font-weight:700;font-size:.97rem}
+.item .nm small{display:block;color:var(--muted);font-weight:500;font-size:.76rem;margin-top:2px}
+.step{display:flex;align-items:center;gap:8px}
+.step button{width:30px;height:30px;border-radius:10px;border:none;background:#eef2f5;cursor:pointer;font-weight:800;font-size:1.05rem;color:var(--teal-dark);transition:.15s}
+.step button:hover{background:var(--yellow)}
+.step b{min-width:20px;text-align:center;font-family:'Baloo 2'}
+.del{background:none;border:none;cursor:pointer;font-size:1.05rem;opacity:.55}
+.del:hover{opacity:1;color:#e11d48}
+.cart-form{padding:6px 18px 12px;display:flex;flex-direction:column;gap:10px}
+.cart-form input,.cart-form textarea{
+  width:100%;padding:11px 14px;border:2px solid #e8e2d6;border-radius:14px;
+  font-family:'Hind';font-size:.95rem;outline:none;background:#fff;resize:none;
+}
+.cart-form input:focus,.cart-form textarea:focus{border-color:var(--teal)}
+.cart-foot{padding:10px 18px 18px}
+.cart-foot .btn{width:100%;justify-content:center;font-size:1.06rem}
+.cart-hint{text-align:center;font-size:.78rem;color:var(--muted);margin-top:9px}
+.form-label{font-size:.8rem;font-weight:700;color:var(--teal-dark);margin-top:2px}
+.toast{
+  position:fixed;left:50%;bottom:30px;transform:translateX(-50%) translateY(90px);
+  background:var(--ink);color:#fff;padding:11px 24px;border-radius:999px;
+  font-weight:600;font-size:.95rem;z-index:90;opacity:0;transition:.3s;pointer-events:none;
+  box-shadow:0 10px 26px rgba(0,0,0,.25);white-space:nowrap;
+}
+.toast.on{opacity:1;transform:translateX(-50%)}
+body.lock{overflow:hidden}
+
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;text-align:center}
+  .hero h1{font-size:2.3rem}
+  .hero p.sub{margin:0 auto}
+  .hero-cta,.hero-trust{justify-content:center}
+  .hero-art{max-width:420px;margin:10px auto 0}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  .nav-links{
+    position:fixed;top:66px;right:14px;flex-direction:column;align-items:flex-start;
+    background:#fff;border-radius:18px;box-shadow:var(--shadow);padding:18px 26px;
+    gap:16px;display:none;
+  }
+  .nav-links.open{display:flex}
+  .hamburger{display:block}
+  .btn-nav{display:none}
+}
+</style>
+</head>
+<body>
+
+<header id="topbar">
+  <div class="container nav">
+    <a href="#home" class="logo">
+      <span class="cross">✚</span>
+      <span>S K HEALTHCARE<small>Bareilly, U.P.</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:+919058070963" class="btn btn-primary btn-nav">📞 90580 70963</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container hero-inner">
+    <div>
+      <span class="pill">🩺 S K Healthcare — सभी ब्रांड्स उपलब्ध!</span>
+      <h1>अब घर की सेहत का <span>ख्याल</span> रखें!</h1>
+      <p class="sub">All types of medical equipment &amp; consumables — BP Machine, Sugar Machine, Nebulizer, Pulse Oximeter aur bahut kuch. किफायती दाम, अच्छी गुणवत्ता के साथ!</p>
+      <div class="tagline">"आपका विश्वास ही हमारी पहचान है... आपकी संतुष्टि, हमारी सफलता!!"</div>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Inquire Now →</a>
+        <a href="tel:+919058070963" class="btn btn-outline">📞 Call Us</a>
+      </div>
+      <div class="hero-trust">
+        <div><b>100%+</b><span>Original Products</span></div>
+        <div><b>5 ⭐</b><span>Achhi Quality &amp; Service</span></div>
+        <div><b>All Brands</b><span>एक ही जगह पर</span></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="bubble b1">🩺</div>
+      <div class="bubble b2">💊</div>
+      <div class="bubble b3">🩹</div>
+      <div class="bubble b4">🧴</div>
+      <div class="card">
+        <div class="big">🏥</div>
+        <h3>Home Healthcare Store</h3>
+        <p>Medical Equipment &amp; Consumables<br>Bareilly 📍</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="products">
+  <div class="container">
+    <div class="sec-head reveal">
+      <h2>Hamare <em>Products</em> 🛒</h2>
+      <p>घर की सेहत के लिए ज़रूरी सारे उपकरण — एक ही दुकान पर, बेहतरीन प्राइसिंग के साथ!</p>
+    </div>
+    <div class="grid prod-grid">
+      <div class="card-p c1 reveal"><div class="ic">🩸</div><h3>BP Machine</h3><p>Blood Pressure Monitor</p><span class="tag">Best Seller ⭐</span><button class="add-cart" data-name="BP Machine">🛒 Add to Order</button></div>
+      <div class="card-p c2 reveal"><div class="ic">💉</div><h3>Sugar Machine</h3><p>Glucometer + Strips Available</p><span class="tag">Daily Use</span><button class="add-cart" data-name="Sugar Machine (Glucometer)">🛒 Add to Order</button></div>
+      <div class="card-p c3 reveal"><div class="ic">🫁</div><h3>Nebulizer</h3><p>For easy breathing at home</p><span class="tag">Doctor Recommended</span><button class="add-cart" data-name="Nebulizer">🛒 Add to Order</button></div>
+      <div class="card-p c4 reveal"><div class="ic">🌡️</div><h3>Digital Thermometer</h3><p>Fast &amp; accurate temperature</p><span class="tag">Family Must-Have</span><button class="add-cart" data-name="Digital Thermometer">🛒 Add to Order</button></div>
+      <div class="card-p c5 reveal"><div class="ic">♨️</div><h3>Hot Water Bag</h3><p>Pain relief &amp; comfort</p><span class="tag">Winter Special ❄️</span><button class="add-cart" data-name="Hot Water Bag">🛒 Add to Order</button></div>
+      <div class="card-p c6 reveal"><div class="ic">❤️</div><h3>Pulse Oximeter</h3><p>SpO₂ &amp; pulse rate check</p><span class="tag">Home Essential</span><button class="add-cart" data-name="Pulse Oximeter">🛒 Add to Order</button></div>
+      <div class="card-p c7 reveal"><div class="ic">🦴</div><h3>Rehab Belt &amp; Ortho</h3><p>Orthopedic support products</p><span class="tag">Support Range</span><button class="add-cart" data-name="Rehab Belt &amp; Ortho">🛒 Add to Order</button></div>
+      <div class="card-p c1 reveal"><div class="ic">🧰</div><h3>And Much More...</h3><p>All types of consumables &amp; equipment</p><span class="tag">Visit Store</span></div>
+    </div>
+    <div class="brands reveal">
+      <b>🏷️ Major Brands:</b>
+      <span class="chip">Omron</span><span class="chip">Dr. Morepen</span><span class="chip">Accu-Chek</span>
+      <span class="chip">Beurer</span><span class="chip">Microlife</span><span class="chip">Yuwell</span>
+      <span class="chip">+ सभी ब्रांड्स उपलब्ध</span>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="container">
+    <div class="sec-head reveal">
+      <h2>Why Choose <em style="color:var(--yellow)">S K Healthcare?</em></h2>
+      <p>विश्वास, गुणवत्ता और सेवा — तीनों एक साथ! ✨</p>
+    </div>
+    <div class="grid why-grid">
+      <div class="w-card reveal"><div class="ic">✅</div><h3>अच्छी गुणवत्ता</h3><p>High quality products with genuine brands — koi compromise nahi!</p></div>
+      <div class="w-card reveal"><div class="ic">💰</div><h3>बेहतरीन प्राइसिंग</h3><p>Affordable pricing for every family — किफायती दाम, दमदार सेवा!</p></div>
+      <div class="w-card reveal"><div class="ic">🤝</div><h3>विश्वासनीय सेवा</h3><p>Post-sale service support — दुकान बेचने के बाद भी हमारे साथ!</p></div>
+      <div class="w-card reveal"><div class="ic">👨‍⚕️</div><h3>विशेषज्ञ सलाह</h3><p>Expert consultation &amp; advice — सही प्रोडक्ट की सही जानकारी!</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="sec-head reveal">
+      <h2>Contact <em>Karein</em> 📞</h2>
+      <p>पूछताछ के लिए अभी कॉल करें या दुकान पर पधारें!</p>
+    </div>
+    <div class="contact-grid">
+      <div class="info-card reveal">
+        <h3>S K Healthcare</h3>
+        <p style="color:#eafffb">Medical Equipment &amp; Consumables</p>
+        <div class="info-row">
+          <div class="ic">📞</div>
+          <p>Call Us:<br>
+            <a href="tel:+919058070963">90580 70963</a>
+            <a href="tel:+918433050447">84330 50447</a>
+          </p>
+        </div>
+        <div class="info-row">
+          <div class="ic">📍</div>
+          <p>Address:<br>Ground Floor, Plot No. 114, Sewadham Colony,<br>Near Karamchari Nagar Police Chowki,<br><b>Bareilly – 243001</b> (U.P.)</p>
+        </div>
+      </div>
+      <div class="map-card reveal">
+        <h3>🏪 Store Visit / Inquiry</h3>
+        <p>हमारी दुकान आएं और सभी प्रोडक्ट्स देखें — all major brands, best prices! District: Bareilly, Uttar Pradesh.</p>
+        <div class="map-btns">
+          <a class="btn btn-wa" href="https://wa.me/919058070963?text=Namaste!%20Mujhe%20S%20K%20Healthcare%20se%20products%20ke%20baare%20me%20jankari%20chahiye." target="_blank" rel="noopener">💬 WhatsApp Us</a>
+          <a class="btn btn-teal" href="https://www.google.com/maps/search/?api=1&query=Sewadham+Colony+Near+Karamchari+Nagar+Police+Chowki+Bareilly+243001" target="_blank" rel="noopener">🗺️ Get Directions</a>
+        </div>
+        <p style="font-size:.85rem;color:#a8b5c0">Mon–Sun · Door-to-door inquiry welcome · Call before visiting 👍</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-strip reveal">
+  <h2>सेहत की ज़रूरत? अभी कॉल करें! 🚀</h2>
+  <p>अब घर की सेहत का रखें ख्याल — S K Healthcare के साथ!</p>
+  <a href="tel:+919058070963" class="btn btn-outline">📞 Call: 90580 70963</a>
+  <a href="tel:+918433050447" class="btn btn-primary" style="margin-left:10px">📞 84330 50447</a>
+</div>
+
+<footer>
+  <div class="f-logo">✚ S K HEALTHCARE</div>
+  <div class="f-tag">आपका विश्वास ही हमारी पहचान है... आपकी संतुष्टि, हमारी सफलता!!</div>
+  <div class="f-en">Aapki Sehat, Hamari Zimmedari!</div>
+  <hr>
+  <p>📍 Sewadham Colony, Near Karamchari Nagar Police Chowki, Bareilly – 243001</p>
+  <p>📞 <a href="tel:+919058070963">9058070963</a> · <a href="tel:+918433050447">8433050447</a></p>
+  <p style="margin-top:14px;font-size:.82rem;color:#8fa3b5">&copy; 2026 S K Healthcare, Bareilly · All medical equipment &amp; consumables</p>
+</footer>
+
+<button class="fab fab-cart hide" id="cartFab" aria-label="Order cart">🛒<span class="fab-badge" id="cartBadge">0</span></button>
+<a class="fab" href="https://wa.me/919058070963" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-panel" id="cartPanel" aria-label="Order cart">
+  <div class="cart-head">
+    <h3>🛒 Aapka Order</h3>
+    <div class="hbtns">
+      <button class="clear" id="cartClear">🧹 Clear</button>
+      <button class="cart-close" id="cartClose">✕</button>
+    </div>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-form">
+    <span class="form-label">Aapki Detail (order ke saath jayegi 👇)</span>
+    <input id="cName" placeholder="Naam">
+    <input id="cPhone" placeholder="Mobile number">
+    <textarea id="cAddr" rows="2" placeholder="Address / Area (Bareilly me delivery?)"></textarea>
+  </div>
+  <div class="cart-foot">
+    <button class="btn btn-wa" id="waOrder">💬 WhatsApp par Order Karein</button>
+    <div class="cart-hint">Order aapke WhatsApp par aayega — hamri team price &amp; delivery confirm karegi ✅</div>
+  </div>
+</aside>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const ham=document.getElementById('hamburger');
+const nav=document.getElementById('navLinks');
+ham.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+
+const topbar=document.getElementById('topbar');
+window.addEventListener('scroll',()=>{
+  topbar.classList.toggle('scrolled',window.scrollY>8);
+});
+
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('show');
+      io.unobserve(e.target);
+    }
+  });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach((el,i)=>{
+  el.style.transitionDelay=(i%4*90)+'ms';
+  io.observe(el);
+});
+
+const CART_KEY='sk_cart_v1';
+let cart=[];
+try{cart=JSON.parse(localStorage.getItem(CART_KEY))||[]}catch(e){cart=[]}
+const saveCart=()=>{try{localStorage.setItem(CART_KEY,JSON.stringify(cart))}catch(e){}}
+
+const cartFab=document.getElementById('cartFab');
+const cartBadge=document.getElementById('cartBadge');
+const cartPanel=document.getElementById('cartPanel');
+const cartOverlay=document.getElementById('cartOverlay');
+const cartItemsBox=document.getElementById('cartItems');
+const cName=document.getElementById('cName');
+const cPhone=document.getElementById('cPhone');
+const cAddr=document.getElementById('cAddr');
+
+let toastTimer;
+function toast(t){
+  const el=document.getElementById('toast');
+  el.textContent=t;el.classList.add('on');
+  clearTimeout(toastTimer);
+  toastTimer=setTimeout(()=>el.classList.remove('on'),1700);
+}
+
+function renderCart(){
+  const count=cart.reduce((s,i)=>s+i.qty,0);
+  cartBadge.textContent=count>99?'99+':count;
+  cartFab.classList.toggle('hide',count===0);
+  if(!cart.length){
+    cartItemsBox.innerHTML='<div class="cart-empty"><span class="big">🛒</span>Aapka order khali hai!<br><a href="#products" id="goProducts">Products dekhein →</a></div>';
+    return;
+  }
+  cartItemsBox.innerHTML=cart.map((it,i)=>`
+    <div class="item">
+      <div class="nm">${it.name}<small>Price WhatsApp par confirm hoga</small></div>
+      <div class="step">
+        <button data-act="minus" data-i="${i}">−</button>
+        <b>${it.qty}</b>
+        <button data-act="plus" data-i="${i}">+</button>
+      </div>
+      <button class="del" data-act="del" data-i="${i}" aria-label="Remove">🗑</button>
+    </div>`).join('');
+}
+
+function addItem(name){
+  const f=cart.find(i=>i.name===name);
+  if(f)f.qty++;else cart.push({name:name,qty:1});
+  saveCart();renderCart();
+  toast('✓ '+name+' order me add!');
+}
+
+function openCart(){
+  cartPanel.classList.add('open');
+  cartOverlay.classList.add('on');
+  document.body.classList.add('lock');
+}
+function closeCart(){
+  cartPanel.classList.remove('open');
+  cartOverlay.classList.remove('on');
+  document.body.classList.remove('lock');
+}
+
+document.querySelectorAll('.add-cart').forEach(b=>b.addEventListener('click',()=>{
+  addItem(b.dataset.name);
+  const old=b.innerHTML;
+  b.classList.add('done');b.innerHTML='✓ Added';
+  setTimeout(()=>{b.classList.remove('done');b.innerHTML=old},900);
+}));
+
+cartItemsBox.addEventListener('click',e=>{
+  if(e.target.id==='goProducts'){closeCart();return}
+  const b=e.target.closest('[data-act]');
+  if(!b)return;
+  const i=+b.dataset.i;
+  if(b.dataset.act==='plus')cart[i].qty++;
+  if(b.dataset.act==='minus'){cart[i].qty--;if(cart[i].qty<1)cart.splice(i,1)}
+  if(b.dataset.act==='del')cart.splice(i,1);
+  saveCart();renderCart();
+});
+
+cartFab.addEventListener('click',openCart);
+cartOverlay.addEventListener('click',closeCart);
+document.getElementById('cartClose').addEventListener('click',closeCart);
+document.getElementById('cartClear').addEventListener('click',()=>{
+  cart=[];saveCart();renderCart();toast('🧹 Order list clear!');
+});
+
+document.getElementById('waOrder').addEventListener('click',()=>{
+  if(!cart.length){toast('Pehle kuch products add karein 🛒');return}
+  let msg='Namaste S K Healthcare! Mujhe ye order chahiye:\n';
+  cart.forEach((it,i)=>{msg+='\n'+(i+1)+'. '+it.name+' × '+it.qty});
+  const n=cName.value.trim(),p=cPhone.value.trim(),a=cAddr.value.trim();
+  if(n)msg+='\n\nNaam: '+n;
+  if(p)msg+='\nMobile: '+p;
+  if(a)msg+='\nAddress: '+a;
+  msg+='\n\n(Kripya price & delivery confirm kar dijiye 🙏)';
+  window.open('https://wa.me/919058070963?text='+encodeURIComponent(msg),'_blank');
+});
+
+renderCart();
+</script>
+</body>
+</html>
